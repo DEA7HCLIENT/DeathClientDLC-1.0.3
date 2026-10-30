@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: unzip -o DeathClientDLC.zip
+      - run: unzip -o DeathClientDLC.zip && rm -f DeathClientDLC/src/main/java/dev/deathclient/dlc/trails.java
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
